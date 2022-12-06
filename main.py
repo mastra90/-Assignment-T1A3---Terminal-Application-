@@ -13,12 +13,12 @@ def main_menu():
     return i
 
 def add_new_contact():
-    name = input("Whats the name of the new contact? \n")
-    number = input("Whats the new contacts number? \n")
-    email = input("Whats the new contacts email address? \n")
+    Name = input("Whats the name of the new contact? \n")
+    Phone = input("Whats the new contacts number? \n")
+    Email = input("Whats the new contacts email address? \n")
+    add_contact(list_of_contacts, Name, Phone, Email)
+    print(f"\n{Name} will be added to your contacts")
 
-    add_contact(list_of_contacts, name, number, email)
-    print(f"{name} will be added to your phonebook")
 
 response = ""
 
