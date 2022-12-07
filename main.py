@@ -1,31 +1,41 @@
-from operations import print_list_of_contacts, add_contact
-from contacts_list import entire_contacts
+from view_contacts import view_contacts
+from contacts_list import all_contacts
 
 
-list_of_contacts = entire_contacts()
 
 def main_menu():
+    print ("\nHello! Welcome to your Contact Book.\n")
     print ("1. View Contacts")
     print ("2. Add Contact")
     print ("3. Delete Contact")
-    print ("4. Quit")
-    i = input("Select your option (1-4): ")
+    print ("4. Quit\n")
+    i = input("Please select your option (1-4): ")
     return i
 
-def add_new_contact():
-    Name = input("Whats the name of the new contact? \n")
-    Phone = input("Whats the new contacts number? \n")
-    Email = input("Whats the new contacts email address? \n")
-    add_contact(list_of_contacts, Name, Phone, Email)
-    print(f"\n{Name} will be added to your contacts")
 
+
+def add_new_contact():
+    print ("\n=========New Contact Entry=========")
+    print ("Please enter the following details:")
+    name = input("\nFull name: ")
+    phone = input("Contact number: ")
+    email = input("Email address: ")
+    
+    all_contacts ()
+
+    print ("\nThe following entry has been added to your Contact Book:\n")
+    print(f"Name:     {name}")
+    print(f"Phone:    {phone}")
+    print(f"Email:    {email}\n")
+
+    
 
 response = ""
 
 while response != "4":
     response = main_menu()
     if response == "1":
-        print_list_of_contacts(list_of_contacts)
+        view_contacts()
     elif response == "2":
         add_new_contact()
     elif response == "3":
@@ -38,3 +48,9 @@ while response != "4":
 
 
 print("You have quit the application. Thanks!") 
+
+
+
+
+
+
