@@ -20,6 +20,13 @@ while user_input != "5":
         for i in entry.keys():
             print("Name: ", i, "\tNumber:", entry[i])
         print()
+    elif user_input == "2":
+        print("\n=====Add Contact=====")
+        name = input("Name: ")
+        phone = input("Number: ")
+        entry[name] = phone
+        print(f"{name} is added.")
+     
 
 
     
