@@ -21,12 +21,39 @@ while user_input != "5":
             print("Name: ", i, "\tNumber:", entry[i])
         print()
     elif user_input == "2":
-        print("\n=====Add Contact=====")
-        name = input("Name: ")
-        phone = input("Number: ")
+        print("\n======Add Contact======\n")
+        name = input("Full name: ")
+        phone = input("Contact number: ")
         entry[name] = phone
-        print(f"{name} is added.")
-     
+        print(f"\n{name} has been added.")
+        input("\nPress 'Enter' to continue\n")
 
+    elif user_input == "3":
+        print("\n======Lookup Number======\n")
+        name = input("Name: ")
+        if name in entry:
+            print(f"\n{name}'s number is:",entry[name])
+            print()
+        else:
+            print ()
+            print(name, "was not found")
+            print ()
 
-    
+    elif user_input == "4":
+        print("\n======Delete Contact======\n")
+        name = input("Name of contact (case sensitive): ")
+        if name in entry:
+            del entry[name]
+            print(f"\n{name} has been removed.")
+            input("\nPress 'Enter' to continue\n") 
+        else:
+            print()
+            print(name, "was not found\n")
+            input("Press 'Enter' to continue\n")
+
+    elif user_input == "5":
+        print("\nYou have quit the application. Thanks!\n") 
+
+    else:
+        print("Invalid entry")
+        input("Press 'Enter' to continue\n")
