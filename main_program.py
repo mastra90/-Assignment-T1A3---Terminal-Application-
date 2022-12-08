@@ -1,48 +1,43 @@
 import os
+from main_menu import main_menu
 from formatting import press_enter, top_lines, bot_lines
-
-# A function to print the main menu of the application
-def main_menu():
-    os.system('cls')
-    print("Welcome to the Address Book application!\n")
-    print("1. View all contacts")
-    print("2. Search contacts")
-    print("3. Add new contact")
-    print("4. Edit a contact")
-    print("5. Delete a contact")
-    print("6. Quit application\n")
-    user_input = input("Please enter your choice (1-6): ")
-    return user_input
+from view_contacts import view_contacts
+from search_contact import search_contact
+from add_new_contact import add_new_contact
+from text_file_config import read_contacts, save_contacts
 
 # Function to clear terminal
 def clear():
     os.system('cls')
 
 # Main program
-user_input = ""
-while user_input != "6":
-    user_input = main_menu()
+contacts = read_contacts()
+user_input = main_menu()
+while user_input != "6": 
     if user_input == "1":
         clear()
         top_lines()
         print("---All Contacts---\n")
-        print("View all contacts - function")
+        view_contacts(contacts)
         bot_lines()
         press_enter()
+        
     elif user_input == "2":
         clear()
         top_lines()
         print("---Search Contacts---\n")
-        print("Search contacts - function")
+        search_contact(contacts)
         bot_lines()
         press_enter()
+
     elif user_input == "3":
         clear()
         top_lines()
         print("---Add New Contact---\n")
-        print("Add new contact - function")
+        add_new_contact(contacts)
         bot_lines()
         press_enter()
+
     elif user_input == "4":
         clear()
         top_lines()
@@ -50,6 +45,7 @@ while user_input != "6":
         print("Edit a contact - function")
         bot_lines()
         press_enter()
+
     elif user_input == "5":
         clear()
         top_lines()
@@ -57,10 +53,21 @@ while user_input != "6":
         print("Delete a contact - function")
         bot_lines()
         press_enter()
-    elif user_input == "6":
+
+    else:
         clear()
-        print("\nYou have quit the application. Goodbye!\n")
+        print("**********ERROR!**********\n")
+        print("Your Input not valid\n")
+        print("Please enter a number between 1-6\n")
+        press_enter()
+
+    save_contacts(contacts)
+    user_input = main_menu()
+
+print("\nYou have quit the application. Goodbye!\n")
+
    
+
 
 
 
