@@ -3,11 +3,12 @@ def read_contacts():
     contacts = {}
     file = open("contacts.txt", "r")
     for line in file.readlines():
-        contact_details = line.split(',')
+        contact_details = line.split()
         name = contact_details[0]
-        phone_num = contact_details[1]
-        email = contact_details[2].strip()
-        contacts[name] = [phone_num, email]
+        last_name = phone_num = contact_details[1]
+        phone_num = contact_details[2]
+        email = contact_details[3].strip()
+        contacts[name] = [last_name, phone_num, email]
     file.close()
     return contacts
 
@@ -15,7 +16,8 @@ def read_contacts():
 def save_contacts(contacts):
     file = open("contacts.txt", "w")
     for name in contacts:
-        phone_num = contacts[name][0]
-        email = contacts[name][1]
-        file.write(name + "          " + phone_num + "          " + email + "\n")
+        last_name = contacts[name][0]
+        phone_num = contacts[name][1]
+        email = contacts[name][2]
+        file.write(name + " " + last_name + " " + phone_num + " " + email + "\n")
     file.close()
