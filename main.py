@@ -10,4 +10,23 @@ def main_menu():
     user_input = input("Please enter your choice (1-6): ")
     return user_input
 
-main_menu()
+# Main program
+user_input = ""
+while user_input != "6":
+    user_input = main_menu()
+    if user_input == "1":
+        print("Views all contacts function")
+    elif user_input == "2":
+        print("Search contacts function")
+    elif user_input == "3":
+        print("Enter new contacts function")
+    elif user_input == "4":
+        print("Edit contacts function")
+    elif user_input == "5":
+        print("Delete contacts function")
+    elif user_input == "6":
+        print("Thanks for using the application!")
+   
+
+
+
