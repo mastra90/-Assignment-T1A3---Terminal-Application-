@@ -3,7 +3,7 @@ import os
 # A function to print the main menu of the application
 def main_menu():
     os.system('cls')
-    print("Welcome to the Address Book application!\n")
+    print("Welcome to your Contacts Book application!\n")
     print("1. View all contacts")
     print("2. Search contacts")
     print("3. Add new contact")

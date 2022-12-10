@@ -6,6 +6,7 @@ from search_contact import search_contact
 from add_new_contact import add_new_contact
 from text_file_config import read_contacts, save_contacts
 from edit_contact import edit_contact
+from delete_contact import delete_contact
 
 # Function to clear terminal
 def clear():
@@ -50,8 +51,8 @@ while user_input != "6":
     elif user_input == "5":
         clear()
         top_lines()
-        print("\n---Delete a Contact---\n\n")
-        print("Delete a contact - function")
+        print("\nDELETE A CONTACT\n")
+        delete_contact(contacts)
         bot_lines()
         press_enter()
 
