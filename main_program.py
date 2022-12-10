@@ -18,7 +18,7 @@ while user_input != "6":
     if user_input == "1":
         clear()
         top_lines()
-        print("---All Contacts---\n")
+        print("\nALL CONTACTS:\n")
         view_contacts(contacts)
         bot_lines()
         press_enter()
@@ -26,7 +26,7 @@ while user_input != "6":
     elif user_input == "2":
         clear()
         top_lines()
-        print("---Search Contacts---\n")
+        print("\nSEARCH CONTACTS\n")
         search_contact(contacts)
         bot_lines()
         press_enter()
@@ -34,7 +34,7 @@ while user_input != "6":
     elif user_input == "3":
         clear()
         top_lines()
-        print("---Add New Contact---\n")
+        print("\nADD NEW CONTACT\n")
         add_new_contact(contacts)
         bot_lines()
         press_enter()
@@ -42,7 +42,7 @@ while user_input != "6":
     elif user_input == "4":
         clear()
         top_lines()
-        print("---Edit a Contact---\n")
+        print("\nEDIT A CONTACT\n")
         edit_contact(contacts)
         bot_lines()
         press_enter()
@@ -50,7 +50,7 @@ while user_input != "6":
     elif user_input == "5":
         clear()
         top_lines()
-        print("---Delete a Contact---\n")
+        print("\n---Delete a Contact---\n\n")
         print("Delete a contact - function")
         bot_lines()
         press_enter()
@@ -65,7 +65,10 @@ while user_input != "6":
     save_contacts(contacts)
     user_input = main_menu()
 
+clear()
+top_lines()
 print("\nYou have quit the application. Goodbye!\n")
+bot_lines()
 
    
 
