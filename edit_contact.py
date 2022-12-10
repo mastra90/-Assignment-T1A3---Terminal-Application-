@@ -1,7 +1,6 @@
 import os
 from formatting import top_lines
 
-
 # A function to edit an existing contact
 def edit_contact(contacts):
     name = input("Enter name of contact to edit (cap sensitive): ")

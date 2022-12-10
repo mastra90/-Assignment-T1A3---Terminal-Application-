@@ -4,9 +4,11 @@ from formatting import top_lines
 # Function to delete contacts
 def delete_contact(contacts):
     name = input("Name of contact to delete (cap sensitive): ")
+
     if name in contacts:
         del contacts[name]
         print("\n" + name + " has been removed from your contacts.\n")
+        
     else:
         os.system('cls')
         top_lines ()

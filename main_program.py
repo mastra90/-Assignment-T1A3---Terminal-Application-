@@ -16,6 +16,7 @@ def clear():
 contacts = read_contacts()
 user_input = main_menu()
 while user_input != "6": 
+
     if user_input == "1":
         clear()
         top_lines()
