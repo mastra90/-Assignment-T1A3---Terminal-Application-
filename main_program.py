@@ -5,6 +5,7 @@ from view_contacts import view_contacts
 from search_contact import search_contact
 from add_new_contact import add_new_contact
 from text_file_config import read_contacts, save_contacts
+from edit_contact import edit_contact
 
 # Function to clear terminal
 def clear():
@@ -42,7 +43,7 @@ while user_input != "6":
         clear()
         top_lines()
         print("---Edit a Contact---\n")
-        print("Edit a contact - function")
+        edit_contact(contacts)
         bot_lines()
         press_enter()
 

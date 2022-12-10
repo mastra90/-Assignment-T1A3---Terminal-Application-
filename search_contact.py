@@ -7,6 +7,6 @@ def search_contact(contacts):
         os.system('cls')
         top_lines()
         print(name + "'s contact info:\n")
-        print(name + " " + contacts[name][0] + ": \t" + contacts[name][1] + "\t" + contacts[name][2])
+        print(name + " " + contacts[name][0] + ": \t" + contacts[name][1])
     else:
         print("\nContact not found")
