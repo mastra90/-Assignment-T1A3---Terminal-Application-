@@ -1,7 +1,7 @@
 import os
 from formatting import top_lines
 
-# A function to add a new contact
+# Add a new contact
 def add_new_contact(contacts):
     print("Please enter the following details:")
     print ("NOTE: Do not use spaces! Please use an underscore (\"_\") instead.\n")

@@ -1,6 +1,6 @@
 import os
 
-# A function to print the main menu of the application
+# The main menu of the application
 def main_menu():
     os.system('cls')
     print("Welcome to your Contacts Book application!\n")

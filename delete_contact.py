@@ -1,7 +1,7 @@
 import os
 from formatting import top_lines
 
-# Function to delete contacts
+# Delete a contact
 def delete_contact(contacts):
     name = input("Name of contact to delete (cap sensitive): ")
 

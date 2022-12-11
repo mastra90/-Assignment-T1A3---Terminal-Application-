@@ -1,8 +1,7 @@
 import os
 from formatting import top_lines
 
-
-# A function to search for a particular contact
+# Search for a contact
 def search_contact(contacts):
     name = input("Enter name of contact to search (cap sensitive): ")
 
