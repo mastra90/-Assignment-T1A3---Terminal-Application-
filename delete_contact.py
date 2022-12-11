@@ -3,7 +3,7 @@ from formatting import top_lines
 
 # Delete a contact
 def delete_contact(contacts):
-    name = input("Name of contact to delete (cap sensitive): ")
+    name = input("Name of contact to delete (case sensitive): ")
 
     if name in contacts:
         del contacts[name]
@@ -13,4 +13,4 @@ def delete_contact(contacts):
         os.system('cls')
         top_lines ()
         print("\nContact not found.\n")
-        print("You may need to include an underscore (\"_\") in your search.\n")
+        print("Please note: The search is case sensitive.\n")

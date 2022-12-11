@@ -3,7 +3,7 @@ from formatting import top_lines
 
 # Search for a contact
 def search_contact(contacts):
-    name = input("Enter name of contact to search (cap sensitive): ")
+    name = input("Enter name of contact to search (case sensitive): ")
 
     if name in contacts:
         os.system('cls')
@@ -15,4 +15,4 @@ def search_contact(contacts):
         os.system('cls')
         top_lines ()
         print("\nContact not found.\n")
-        print("You may need to include an underscore (\"_\") in your search.\n")
+        print("Please note: The search is case sensitive.\n")

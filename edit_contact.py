@@ -3,7 +3,7 @@ from formatting import top_lines
 
 # Edit an existing contact
 def edit_contact(contacts):
-    name = input("Enter name of contact to edit (cap sensitive): ")
+    name = input("Enter name of contact to edit (case sensitive): ")
     if name in contacts:
         phone_num = input("Enter new phone number: ")
         email = input("Enter new email address: ")
@@ -13,4 +13,4 @@ def edit_contact(contacts):
         os.system('cls')
         top_lines ()
         print("\nContact not found.\n")
-        print("You may need to include an underscore (\"_\") in your search.\n")
+        print("Please note: The search is case sensitive.\n")

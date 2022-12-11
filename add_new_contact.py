@@ -3,8 +3,7 @@ from formatting import top_lines
 
 # Add a new contact
 def add_new_contact(contacts):
-    print("Please enter the following details:")
-    print ("NOTE: Do not use spaces! Please use an underscore (\"_\") instead.\n")
+    print("Please enter the following details:\n")
     name = input("Full name: ")
 
     if name in contacts:
