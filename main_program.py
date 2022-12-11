@@ -42,7 +42,6 @@ while user_input != "6":
         top_lines()
         print("\nADD NEW CONTACT\n")
         add_new_contact(contacts)
-        bot_lines()
         press_enter()
 
     # Edit a contact
