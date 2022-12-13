@@ -11,8 +11,7 @@ from view_contacts import view_contacts
 
 # Clear terminal
 def clear():
-    # os.system('clear')
-    os.system('cls')
+    os.system('clear')
 
 
 # Main program

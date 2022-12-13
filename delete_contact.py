@@ -10,7 +10,6 @@ def delete_contact(contacts):
         print("\n" + name + " has been removed from your contacts.\n")
         
     else:
-        # os.system('clear')
-        os.system('cls')
+        os.system('clear')
         top_lines ()
         contact_not_found()

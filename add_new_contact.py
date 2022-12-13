@@ -7,14 +7,12 @@ def add_new_contact(contacts):
     name = input("Full name: ")
 
     if name == " ":
-        # os.system('clear')
-        os.system('cls')
+        os.system('clear')
         top_lines ()
         print("\nDo not enter a space for name!\n") 
         bot_lines()
     elif name in contacts:
-            # os.system('clear')
-            os.system('cls')    
+            os.system('clear')  
             top_lines ()
             print("\nContact already exists.\n")
             bot_lines()
@@ -23,8 +21,7 @@ def add_new_contact(contacts):
         email = input("Email address: ")
         while True:
             if " " in email:
-                # os.system('clear')
-                os.system('cls')
+                os.system('clear')
                 top_lines ()
                 print("\nDo not use spaces in email addresses!\n")
                 bot_lines()

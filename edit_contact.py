@@ -11,7 +11,6 @@ def edit_contact(contacts):
         contacts[name] = [phone_num, email]
         print("\n" + name + "'s information has been updated.\n")
     else:
-        # os.system('clear')
-        os.system('cls')
+        os.system('clear')
         top_lines ()
         contact_not_found()
