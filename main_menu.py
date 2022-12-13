@@ -2,7 +2,8 @@ import os
 
 # The main menu of the application
 def main_menu():
-    os.system('clear')
+    # os.system('clear')
+    os.system('cls')
     print("Welcome to your Contacts Book application!\n")
     print("1. View all contacts")
     print("2. Search contacts")

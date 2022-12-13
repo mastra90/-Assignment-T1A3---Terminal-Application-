@@ -1,18 +1,21 @@
 import os
-from formatting import top_lines
+from formatting import top_lines, contact_not_found
 
 # Search for a contact
 def search_contact(contacts):
-    name = input("Enter name of contact to search (case sensitive): ")
+    name = input("Full name of contact to search (case sensitive): ")
 
     if name in contacts:
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         top_lines()
-        print("\n" + name + "'s contact info:\n")
-        print(contacts[name][0] + "\n" + contacts[name][1] + "\n")
+        text = "\nSEARCH CONTACTS"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
+        print(name + "\n" + contacts[name][0] + "\n" + contacts[name][1] + "\n")
         
     else:
-        os.system('clear')
+        # os.system('clear')
+        os.system('cls')
         top_lines ()
-        print("\nContact not found.\n")
-        print("Please note: The search is case sensitive.\n")
+        contact_not_found()

@@ -11,68 +11,81 @@ from view_contacts import view_contacts
 
 # Clear terminal
 def clear():
-    os.system('clear')
+    # os.system('clear')
+    os.system('cls')
+
 
 # Main program
 contacts = read_contacts()
 user_input = main_menu()
 while user_input != "6": 
 
-    # View all contacts
+# View all contacts.
     if user_input == "1":
         clear()
         top_lines()
-        print("\nALL CONTACTS:\n")
+        text = "\nALL CONTACTS"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
         view_contacts(contacts)
         bot_lines()
         press_enter()
     
-    # Search for a contact  
+# Search for a contact.  
     elif user_input == "2":
         clear()
         top_lines()
-        print("\nSEARCH CONTACTS\n")
+        text = "\nSEARCH CONTACTS"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
         search_contact(contacts)
         bot_lines()
         press_enter()
 
-    # Add a new contact
+# Add a new contact.
     elif user_input == "3":
         clear()
         top_lines()
-        print("\nADD NEW CONTACT\n")
+        text = "\nADD NEW CONTACT"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
         add_new_contact(contacts)
         press_enter()
 
-    # Edit a contact
+# Edit a contact.
     elif user_input == "4":
         clear()
         top_lines()
-        print("\nEDIT A CONTACT\n")
+        text = "\nEDIT A CONTACT"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
         edit_contact(contacts)
         bot_lines()
         press_enter()
 
-    # Delete a contact
+# Delete a contact
     elif user_input == "5":
         clear()
         top_lines()
-        print("\nDELETE A CONTACT\n")
+        text = "\nDELETE A CONTACT"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
         delete_contact(contacts)
         bot_lines()
         press_enter()
 
-    # Invalid entry (if user did not choose a number between 1-6)
+# Invalid entry (if user did not choose a number between 1-6)
     else:
         clear()
         top_lines()
-        print("\nERROR!\n")
+        text = "\nERROR!"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + "\n"
+        print(title)
         print("Your Input not valid.")
-        print("Please enter a number between 1-6\n")
+        print("Please enter a number between 1-6.\n")
         bot_lines()
         press_enter()
 
-    
     save_contacts(contacts)
     user_input = main_menu()
 
