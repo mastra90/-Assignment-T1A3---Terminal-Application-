@@ -10,7 +10,7 @@ def delete_contact(contacts):
         print("\n" + name + " has been removed from your contacts.\n")
         
     else:
-        os.system('cls')
+        os.system('clear')
         top_lines ()
         print("\nContact not found.\n")
         print("Please note: The search is case sensitive.\n")
