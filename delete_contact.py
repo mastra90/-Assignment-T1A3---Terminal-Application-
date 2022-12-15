@@ -7,6 +7,8 @@ def delete_contact(contacts):
 
     if name in contacts:
         del contacts[name]
+        os.system('clear')
+        top_lines()
         print("\n" + name + " has been removed from your contacts.\n")
         
     else:

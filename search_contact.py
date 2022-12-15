@@ -8,10 +8,10 @@ def search_contact(contacts):
     if name in contacts:
         os.system('clear')
         top_lines()
-        text = "\nSEARCH CONTACTS"
+        text = "\nSEARCH RESULTS"
         title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
         print(title)
-        print(name + "\n" + contacts[name][0] + "\n" + contacts[name][1] + "\n")
+        print("Name: " + name + "\n" + "Phone: " + contacts[name][0] + "\n" + "Email: " + contacts[name][1] + "\n")
         
     else:
         os.system('clear')

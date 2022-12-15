@@ -27,7 +27,7 @@ while user_input != "6":
         title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
         print(title)
         view_contacts(contacts)
-        bot_lines()
+        bot_lines ()
         press_enter()
     
 # Search for a contact.  

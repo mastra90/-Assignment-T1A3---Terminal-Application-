@@ -25,16 +25,15 @@ def add_new_contact(contacts):
             bot_lines()
     else:
         phone_num = input("Phone number: ")
-        email = input("Email address: ")
         while True:
+            email = input("Email address: ")
             if " " in email:
-                os.system('clear')
-                top_lines ()
-                print("\nDo not use spaces in email addresses!\n")
-                bot_lines()
-                break
+                print("\nDo not use spaces in email addresses!")
+                print("Please try again.\n")
             else:    
                 contacts[name] = [phone_num, email]
+                os.system('clear')
+                top_lines ()
                 print("\n" + name + " has been added to your contacts.\n")
                 bot_lines()
                 break
