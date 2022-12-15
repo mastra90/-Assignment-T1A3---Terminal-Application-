@@ -15,7 +15,6 @@ def read_contacts():
 # Save changes to the contacts.txt file
 def save_contacts(contacts):
     file = open("contacts.txt", "w")
-
     for name in contacts:
         phone_num = contacts[name][0]
         email = contacts[name][1]
