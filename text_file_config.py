@@ -7,7 +7,7 @@ def read_contacts():
         contact_details = line.split('|')
         name = ' '.join(contact_details[0:-2])
         phone_num = contact_details[-2]
-        email = contact_details[-1].strip()
+        email = contact_details[-1]
         contacts[name] = [phone_num, email]
     file.close()
     return contacts

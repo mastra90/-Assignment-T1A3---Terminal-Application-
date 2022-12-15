@@ -18,6 +18,20 @@ def add_new_contact(contacts):
         title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
         print(title)
         add_new_contact(contacts)
+    
+    elif name == "":
+        os.system('clear')
+        top_lines ()
+        print("\nYou cannot enter only spaces in the name field!\n") 
+        bot_lines()
+        press_enter()
+        os.system('clear')
+        top_lines()
+        text = "\nADD NEW CONTACT"
+        title = "\x1B[1;4m" + text + "\x1B[0m" + ":\n"
+        print(title)
+        add_new_contact(contacts)
+
     elif name in contacts:
             os.system('clear')  
             top_lines ()
