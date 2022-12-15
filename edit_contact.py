@@ -7,9 +7,17 @@ def edit_contact(contacts):
     name = input("Full name of contact to edit (case sensitive): ")
     if name in contacts:
         phone_num = input("Enter new phone number: ")
-        email = input("Enter new email address: ")
-        contacts[name] = [phone_num, email]
-        print("\n" + name + "'s information has been updated.\n")
+        while True:
+            email = input("Enter new email address: ")
+            if " " in email:
+                print("\nDo not use spaces in email addresses!")
+                print("Please try again.\n")
+            else:
+                contacts[name] = [phone_num, email]
+                os.system('clear')
+                top_lines()
+                print("\n" + name + "'s information has been updated.\n")
+                break
     else:
         os.system('clear')
         top_lines ()
