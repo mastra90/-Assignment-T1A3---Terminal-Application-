@@ -22,7 +22,7 @@ def add_new_contact(contacts):
     elif name == "":
         os.system('clear')
         top_lines ()
-        print("\nYou cannot enter only spaces in the name field!\n") 
+        print("\nYou cannot leave the name field blank!\n") 
         bot_lines()
         press_enter()
         os.system('clear')
